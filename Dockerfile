@@ -16,10 +16,10 @@ RUN apt-get update && apt-get install -y \
 USER steam
 WORKDIR ${STEAMCMDDIR}
 
-# Install SteamCMD
+# Install SteamCMD.
 RUN curl -sSL https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz | tar -xzv
 
-# Install Rust server
+# Install Rust server.
 RUN ./steamcmd.sh +login anonymous +force_install_dir ${SERVERDIR} +app_update ${STEAMAPPID} validate +quit
 
 # Install Oxide/uMod.
