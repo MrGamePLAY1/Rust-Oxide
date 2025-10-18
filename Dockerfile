@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV STEAMCMDDIR=/steamcmd
 ENV SERVERDIR=/server
 
-# Rust server app ID
+# Rust server app ID.
 ENV STEAMAPPID=258550 
 
 RUN apt-get update && apt-get install -y \
