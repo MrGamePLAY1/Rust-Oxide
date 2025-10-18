@@ -22,9 +22,8 @@ RUN curl -sSL https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.ta
 # Install Rust server.
 RUN ./steamcmd.sh +login anonymous +force_install_dir ${SERVERDIR} +app_update ${STEAMAPPID} validate +quit
 
-# Install Oxide/uMod.
-WORKDIR ${SERVERDIR}
-RUN curl -fsSL https://umod.org/games/rust/download/latest/linux -o oxide.zip && \
+# Install uMod/Oxide from the official GitHub releases for better reliability
+RUN curl -fsSL https://github.com/oxidemod/oxide.rust/releases/latest/download/Oxide.Rust-linux.zip -o oxide.zip && \
     unzip oxide.zip -d . && \
     rm oxide.zip
 
