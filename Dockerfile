@@ -30,6 +30,9 @@ RUN curl -fsSL https://github.com/oxidemod/oxide.rust/releases/latest/download/O
 EXPOSE 28015/tcp 28015/udp 28016/tcp 28016/udp
 
 COPY entrypoint.sh /entrypoint.sh
+
+# Make it executable as root
+USER root
 RUN chmod +x /entrypoint.sh
 
 # Switch back to steam user to run the server
