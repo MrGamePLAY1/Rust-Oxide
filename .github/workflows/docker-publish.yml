@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'docker_compose'
+      - 'Dockerfile'
       - 'entrypoint.sh'
 
 jobs:
