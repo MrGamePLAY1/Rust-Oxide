@@ -24,7 +24,7 @@ RUN ./steamcmd.sh +login anonymous +force_install_dir ${SERVERDIR} +app_update $
 
 # Install Oxide/uMod.
 WORKDIR ${SERVERDIR}
-RUN curl -sSL https://umod.org/games/rust/download/latest/linux -o oxide.zip && \
+RUN curl -fsSL https://umod.org/games/rust/download/latest/linux -o oxide.zip && \
     unzip oxide.zip -d . && \
     rm oxide.zip
 
