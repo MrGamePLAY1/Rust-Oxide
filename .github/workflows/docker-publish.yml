@@ -32,4 +32,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/mrgameplay/rust-oxide:latest
+          tags: ${{ steps.meta.outputs.tags }}
