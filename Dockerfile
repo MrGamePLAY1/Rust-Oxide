@@ -31,4 +31,7 @@ EXPOSE 28015/tcp 28015/udp 28016/tcp 28016/udp
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+
+# Switch back to steam user to run the server
+USER steam
 ENTRYPOINT ["/entrypoint.sh"]
